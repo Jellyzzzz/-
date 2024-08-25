@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+char x[100];
+printf("请输入一串英文\n");
+scanf("%s",x);
+int N=strlen(x);
+//此处等价于cs50中的get__string函数
+for(int i = 0; i<N;i++)
+//此处遍历整个字符串直到\0
+{
+    if (x[i]>='a'&&x[i]<='z')
+    {
+    x[i]=x[i]-32;
+    //此处将小写字母转化为大写字母 大写字母转化小写字母同理
+    printf("%c",x[i]);
+    }
+    else 
+    {
+        printf("%c",x[i]);
+    }
+}
+
+   return 0;
+}
